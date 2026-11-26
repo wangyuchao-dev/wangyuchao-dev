@@ -34,14 +34,14 @@
 
 > README 里完整写了「为什么这么拆」「阈值怎么测出来」「语料为什么不能给现成行程」，比代码更能说明问题。
 
-### 小驾同学 · LangChain4j 驾考助手
+### [小驾同学 · LangChain4j 驾考助手](https://github.com/wangyuchao-dev/xiaojia-langchain4j)
 `Spring Boot` `LangChain4j` `Ollama` `MySQL` `PGVector`
 
 - AI Service 声明式接口，业务代码不直接碰模型
 - 多轮会话记忆用 `MysqlChatMemoryStore` 持久化，重启不丢上下文
 - RAG 检索 + 工具调用，答驾考题时能引用题库原文
 
-### pdf-pipeline · PDF 自动化解析入库
+### [pdf-pipeline · PDF 自动化解析入库](https://github.com/wangyuchao-dev/pdf-pipeline)
 `boto3` `MinIO` `MinerU 4.x` `LangChain` `Chroma`
 
 - MinIO 下载 → MinerU 解析 → 解包取 markdown → 向量入库 → 回存
