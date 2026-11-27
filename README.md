@@ -34,6 +34,17 @@
 
 > README 里完整写了「为什么这么拆」「阈值怎么测出来」「语料为什么不能给现成行程」，比代码更能说明问题。
 
+### [知渊 · 企业知识库问答](https://github.com/wangyuchao-dev/zhiyuan)
+`Python` `FastAPI` `LangChain` `Chroma` `BM25` `RRF` `Vue 3`
+
+把几十页制度 PDF 变成「问一句、答案带出处」。核心在检索质量，不在调通接口：
+
+- **双路召回 + RRF 融合**：向量管语义，BM25 管 `E1017` 这类纯符号；按名次融合（0.7 / 0.3），不按分数相加
+- **34 题评测集**：纯向量 82.4% → 混合检索 **91.2%**，编号密集型 **5/8 → 8/8**；语义类持平，如实写进 README
+- **意图先用规则快判**：省一次模型调用，7s → 2.3s；一个意图一块提示词
+- **三层记忆**：最近原文 / 稳定事实 / 压缩摘要，落 SQLite 重启不丢
+- **36 个离线单测**：不联网、不花钱、不依赖数据库，覆盖失败路径
+
 ### [小驾同学 · LangChain4j 驾考助手](https://github.com/wangyuchao-dev/xiaojia-langchain4j)
 `Spring Boot` `LangChain4j` `Ollama` `MySQL` `PGVector`
 
